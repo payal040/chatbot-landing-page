@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f9ff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            font-size: clamp(24px, 5vw, 36px);
+            color: #333;
+            margin: 45px 0;
+            padding-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: #00a3d3;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        img {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            border: 3px solid #979696;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: clamp(20px, 4vw, 28px);
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .button-container {
+            margin: 40px 0;
+            padding: 20px;
+        }
+
+        .homepage-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            color: white;
+            background-color: #00a3d3;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .homepage-button:hover {
+            background-color: #0086ad;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-content {
+                order: 2;
+            }
+
+            img {
+                order: 1;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                margin-top: 0;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title {
+                margin: 30px 0;
+            }
+
+            section {
+                padding: 20px 10px;
+            }
+
+            .button-container {
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Our Services</h1>
+        
+        <section id="section1">
+            <img src="assets/bot.gif" alt="Appointment Booking">
+            <div class="text-content">
+                <h2>Effortless Appointment Booking</h2>
+                <p>Our streamlined appointment booking system allows you to schedule consultations with healthcare professionals quickly and easily. Choose your preferred time slot and receive instant confirmation.</p>
+            </div>
+        </section>
+
+        <section id="section2">
+            <img src="assets/bot.gif" alt="Hospital Location">
+            <div class="text-content">
+                <h2>Calling & Hospital Location</h2>
+                <p>Find nearby hospitals and medical facilities with our location service. Get instant access to contact information and make direct calls for immediate assistance when needed.</p>
+            </div>
+        </section>
+
+        <section id="section3">
+            <img src="assets/bot.gif" alt="Prescription Upload">
+            <div class="text-content">
+                <h2>Prescription Upload</h2>
+                <p>Securely upload and store your prescriptions in our system. Access your medication history, receive reminders, and easily share information with healthcare providers.</p>
+            </div>
+        </section>
+
+        <div class="button-container">
+            <a href="index.html" class="homepage-button">Return to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>
